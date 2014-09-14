@@ -1,0 +1,12 @@
+{
+  "name": "angular-html5-audio",
+  "version": "0.1.0",
+  "dependencies": {
+    "angular": "1.3.0-rc.0",
+    "dsp.js": "*"
+  },
+  "devDependencies": {
+    "d3": "*",
+    "teoria": "*"
+  }
+}

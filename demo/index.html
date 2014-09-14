@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="ngHTML5Audio.demo">
+<head>
+  <title>Angular HTML5 Audio</title>
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/d3/d3.js"></script>
+  <script src="/dist/angular-html5-audio.js"></script>
+  <script src="demo.js"></script>
+
+  <link href="graph.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Angular HTML5 Audio</h1>
+  <h2>A collection of services to make using the HTML5 Web Audio API easier.</h2>
+
+  <div ng-controller="MicController">
+    <button ng-click="toggle()" ng-disabled="mic.waiting">{{ text }}</button>
+    <buffer-graph buffer="buffer" name="amplitude"></buffer-graph>
+  </div>
+</body>
+</html>

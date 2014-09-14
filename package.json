@@ -1,0 +1,12 @@
+{
+  "name": "angular-html5-audio",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt-contrib-connect": "~0.8.0",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-uglify": "~0.5.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-open": "~0.2.3",
+    "grunt": "~0.4.0"
+  }
+}
