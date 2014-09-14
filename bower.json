@@ -1,12 +1,19 @@
 {
   "name": "angular-html5-audio",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "description": "Angular Services for HTML5 Web Audio",
   "dependencies": {
-    "angular": "1.3.0-rc.0",
-    "dsp.js": "*"
+    "angular": "1.3.0-rc.0"
   },
   "devDependencies": {
-    "d3": "*",
-    "teoria": "*"
-  }
+    "d3": "*"
+  },
+  "ignore": [
+    "demo",
+    "test",
+    "lib",
+    "src",
+    "Gruntfile.js",
+    "package.json"
+  ]
 }

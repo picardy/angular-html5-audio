@@ -2,6 +2,21 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    bump: {
+      options: {
+        files: ['package.json', 'bower.json'],
+        updateConfigs: [],
+        commit: true,
+        commitMessage: 'Release v%VERSION%',
+        commitFiles: ['package.json'],
+        createTag: true,
+        tagName: 'v%VERSION%',
+        tagMessage: 'Version %VERSION%',
+        push: true,
+        pushTo: 'origin',
+        gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d'
+      }
+    },
     connect: {
       server: {
         options: {
@@ -57,7 +72,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-open');
+  grunt.loadNpmTasks('grunt-bump');
 
   grunt.registerTask('dist', ['concat:dist', 'uglify:dist']);
   grunt.registerTask('server', ['dist', 'connect:server', 'open:dev', 'watch']);
+  grunt.registerTask('release', ['dist', 'bump']);
 };
